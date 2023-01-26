@@ -6,32 +6,30 @@ import {
   Link
 } from "react-router-dom";
 
-import Home from './components/HomePage/Home';
+import Home from './components/HomePageMain/Home';
 import Accounting from './components/WorkingPage/Accounting';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (<>
-    <h1>Hello</h1>
     <Router>
       <header>
-        <nav>
-          <ul className='navigation'>
-            <li >
-              <Link className='link' to="/">Home</Link>
-            </li>
-            <li>
-              <Link className='link' to="/logIn">Log In</Link>
-            </li>
-            <li >
-              <Link className='link' to="/accounting">System</Link>
-            </li>
-          </ul>
+        <nav className='navigation_container'>
+          <div className='navigation'>
+            <Link className='navigation_link' to="/">
+              <img className='logo' src='./favicon.png' />
+              Home&Accounting
+            </Link>
+            <Link className='navigation_link' to="/accounting">System</Link>
+            <Link className='navigation_link' to="/logIn">Log In</Link>
+          </div>
         </nav>
-        <Switch>
+      </header>
+      <Switch>
           <Route path="/logIn">
-
+              <h1>Hello2</h1>
           </Route>
           <Route path="/accounting">
             <Accounting />
@@ -39,12 +37,9 @@ function App() {
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
-      </header>   
+        </Switch>   
     </Router>
-  </>
-    
-  );
+  </>);
 }
 
 export default App;

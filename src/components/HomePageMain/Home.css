@@ -1,0 +1,115 @@
+.home_main_container {
+    padding-bottom: 5rem;
+    background-color: rgb(247, 247, 247);
+}
+
+.work_zone {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.mar-top6rem {
+    padding-top: 6rem;
+}
+
+.mar-bot7rem {
+    padding-bottom: 7rem;
+}
+
+.title_about {
+    padding-bottom: 1.3rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.container_possibility {
+    padding: 6.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container_possibility_block {
+    font-size: 1.16rem;
+    width: 25%;
+}
+
+.container_possibility_block span {
+    font-weight: 400;
+}
+
+.about_project {
+    background-color: rgba(241, 236, 227, 0.37);
+}
+
+.about {
+    padding-top: 7rem;
+    padding-bottom: 1.3rem;
+}
+
+.about_idea {
+    margin: 0.5rem 0;
+    display: block;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.about_idea_description {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.title_paragrapf {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.list {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.btn_panel {
+    display: block;
+    width: 2.8rem;
+    height: 1.5rem;
+    background-image: url(../../../public/arrowDown.jpg);
+    margin: 1rem auto 5rem;
+    transition: .2s;
+}
+
+.active {
+    transform: rotate(180deg);
+    transition: .2s;
+}
+
+.text_public {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.home_footer_container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_link {
+    font-size: 1.2rem;
+    color: black;
+    border: 1px solid gray;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+.footer_link:hover {
+    color: gray;
+    text-decoration: none;
+}

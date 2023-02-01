@@ -2,12 +2,14 @@ import React from 'react';
 import { 
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
-import Home from './components/HomePageMain/Home';
-import Accounting from './components/WorkingPage/Accounting';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import Home from './components/Pages/Home/Home.jsx';
+import Accounting from './components/Pages/Accounting/Accounting.jsx';
+import Authorization from './components/Pages/Authorization/Authorization.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -15,27 +17,33 @@ import './App.css';
 function App() {
   return (<>
     <Router>
-      <header>
-        <nav className='navigation_container'>
-          <div className='navigation'>
-            <Link className='navigation_link' to="/">
-              <img className='logo' src='./favicon.png' />
-              Home&Accounting
-            </Link>
-            <Link className='navigation_link' to="/accounting">System</Link>
-            <Link className='navigation_link' to="/logIn">Log In</Link>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <Switch>
-          <Route path="/logIn">
-              <h1>Hello2</h1>
+          <Route path="/authorization">
+            <div className='wrapper'>
+              <Authorization />
+              <Footer />
+            </div>
           </Route>
           <Route path="/accounting">
-            <Accounting />
+            <div className='wrapper'>
+              <Accounting />
+              <Footer />
+            </div>
+          </Route>
+          <Route path="/publication-of-articles">
+            <div className='wrapper'>
+              <main>
+                <h2>Publication of articles</h2>
+              </main>
+              <Footer />
+            </div>
           </Route>
           <Route path="/">
-            <Home />
+            <div className='wrapper'>
+              <Home />
+              <Footer />
+            </div>
           </Route>
         </Switch>   
     </Router>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { 
     FcConferenceCall,
     FcServices,
@@ -6,29 +7,17 @@ import {
     FcExport,
     FcIdea
 } from "react-icons/fc";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-
-import Blogs from "../BlogsPage/Blogs";
 
 import './Home.css'
 
 export default function Home() {
+    const [ btnPanel, setBtnPanel ] = useState(false)
 
     function openText() {
-        document.querySelector('.btn_panel').classList.contains('active') ?
-        document.querySelector('.btn_panel').classList.remove('active') :
-        document.querySelector('.btn_panel').classList.add('active')
-        !document.querySelector('.text_public').classList.contains('d-none') ?
-        document.querySelector('.text_public').classList.add('d-none') :
-        document.querySelector('.text_public').classList.remove('d-none')
+        btnPanel?setBtnPanel(false):setBtnPanel(true)
     }
 
-    return (<>
+    return (
     <main className='home_main_container'>
         <div className='work_zone'>
             <h1 className='text-center mar-top6rem'>
@@ -142,9 +131,9 @@ export default function Home() {
             <h2 className="title_about mar-top6rem">Домашня бухгалтерія</h2>
             <div className="show_panel ">
                 <p>
-                    <a className="btn_panel" onClick={openText} />
+                    <a className={btnPanel?"btn_panel active":"btn_panel"} onClick={openText} />
                 </p>
-                <div className="text_public d-none">
+                <div className={btnPanel?"text_public":"text_public d-none"}>
                     <p>
                         За всіх часів і народів суспільство поділялося на людей з великим достатком, 
                         і на тих, кому жилося важко і бідно. Причин, що пояснюють таку закономірність, 
@@ -205,38 +194,5 @@ export default function Home() {
             </div>
         </div>
     </main>
-    <footer className="home_footer_container">
-        <div>
-            <h2>Угода користувача</h2>
-            <p className="text-center">
-                <a className="footer_link" href="">Читати</a>
-            </p>
-        </div>
-        <div>
-            <h2>Публікації статей</h2>
-            <p className="text-center">
-                <a className="footer_link" href="">Читати</a>
-            </p>
-        </div>{/* <Router>
-            <div className="home_footer_container">
-                <div>
-                    <h2>Угода користувача</h2>
-                    <Link className='footer_link text-center' to="/blogs">Читати</Link>
-                </div>
-                <div>
-                    <h2>Публікації статей</h2>
-                    <Link className='footer_link text-center' to="/accounting">Читати</Link>
-                </div>
-            </div>
-        <Switch>
-            <Route path="/blogs">
-                <Blogs />
-            </Route>
-            <Route path="/">
-                
-            </Route>
-            </Switch>   
-        </Router> */}
-    </footer>
-    </>)
+    )
 }

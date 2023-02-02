@@ -34,7 +34,7 @@ function App() {
           <Route path="/publication-of-articles">
             <div className='wrapper'>
               <main>
-                <h2>Publication of articles</h2>
+                <h2>Its mac test</h2>
               </main>
               <Footer />
             </div>

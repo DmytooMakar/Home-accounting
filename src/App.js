@@ -1,3 +1,4 @@
+import { useState } from "react"
 import React from 'react';
 import { 
   BrowserRouter as Router,
@@ -15,13 +16,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  const [ user, setUser ] = useState({
+    email : "",
+    password : ""
+  });
+
   return (<>
     <Router>
       <Header />
       <Switch>
           <Route path="/authorization">
             <div className='wrapper'>
-              <Authorization />
+              <Authorization setUser={setUser} user={user} />
               <Footer />
             </div>
           </Route>

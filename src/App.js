@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 
+import Blogs from "./components/Pages/Blogs/Blogs.jsx";
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Home from './components/Pages/Home/Home.jsx';
@@ -39,9 +40,7 @@ function App() {
           </Route>
           <Route path="/publication-of-articles">
             <div className='wrapper'>
-              <main>
-                <h2>Its mac test</h2>
-              </main>
+              <Blogs />
               <Footer />
             </div>
           </Route>
@@ -51,6 +50,7 @@ function App() {
               <Footer />
             </div>
           </Route>
+          <Route></Route>
         </Switch>   
     </Router>
   </>);

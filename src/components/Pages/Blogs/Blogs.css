@@ -1,8 +1,6 @@
 .blogs-container {
     padding: 6rem 0;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
 }
 
 .blogs-list {

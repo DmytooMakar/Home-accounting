@@ -6,6 +6,7 @@ import {
   Route
 } from "react-router-dom";
 
+import Blog from "./components/Pages/Blogs/Blog/Blog.jsx";
 import Blogs from "./components/Pages/Blogs/Blogs.jsx";
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -26,32 +27,37 @@ function App() {
     <Router>
       <Header />
       <Switch>
-          <Route path="/authorization">
-            <div className='wrapper'>
-              <Authorization setUser={setUser} user={user} />
-              <Footer />
-            </div>
-          </Route>
-          <Route path="/accounting">
-            <div className='wrapper'>
-              <Accounting />
-              <Footer />
-            </div>
-          </Route>
-          <Route path="/publication-of-articles">
-            <div className='wrapper'>
-              <Blogs />
-              <Footer />
-            </div>
-          </Route>
-          <Route path="/">
-            <div className='wrapper'>
-              <Home />
-              <Footer />
-            </div>
-          </Route>
-          <Route></Route>
-        </Switch>   
+        <Route path="/blogs/:blogId">
+          <div className='wrapper' >
+            <Blog />
+            <Footer />
+          </div>
+        </Route>
+        <Route path="/blogs">
+          <div className='wrapper'>
+            <Blogs />
+            <Footer />
+          </div>
+        </Route>
+        <Route path="/authorization">
+          <div className='wrapper'>
+            <Authorization setUser={setUser} user={user} />
+            <Footer />
+          </div>
+        </Route>
+        <Route path="/accounting">
+          <div className='wrapper'>
+            <Accounting />
+            <Footer />
+          </div>
+        </Route>
+        <Route path="/">
+          <div className='wrapper'>
+            <Home />
+            <Footer />
+          </div>
+        </Route>
+      </Switch>   
     </Router>
   </>);
 }

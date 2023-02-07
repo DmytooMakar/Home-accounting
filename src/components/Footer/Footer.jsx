@@ -17,7 +17,7 @@ export default function Footer(){
         <div>
             <h2>Публікації статей</h2>
             <p className="text-center">
-                <Link className="footer_link" to="/publication-of-articles">Читати</Link>
+                <Link className="footer_link" to="/blogs">Читати</Link>
             </p>
         </div>
     </footer>

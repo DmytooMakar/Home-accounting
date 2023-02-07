@@ -30,8 +30,6 @@ export default function Authorization({user, setUser}) {
         }))
     }
 
-    console.log(user)
-
     return (
     <main className="form-main-authorization">
         <Form>

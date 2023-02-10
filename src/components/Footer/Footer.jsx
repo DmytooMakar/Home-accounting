@@ -1,17 +1,22 @@
-import {
-    Link
-} from "react-router-dom"
+import { useState } from "react"
+import { Link } from "react-router-dom"
 
+import ModalAlert from "../Pages/Agreement/ModalAlert";
 
 import "./Footer.css"
+    
 
 export default function Footer(){
-    return (
+    const [ show, setShow ] = useState(false);
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
+    return (<>
     <footer className="home_footer_container">
         <div>
             <h2>Угода користувача</h2>
             <p className="text-center">
-                <Link className="footer_link" to="">Читати</Link>
+                <button className="footer_link footer-btn" onClick={handleShow}>Читати</button>
             </p>
         </div>
         <div>
@@ -21,5 +26,8 @@ export default function Footer(){
             </p>
         </div>
     </footer>
+    
+    <ModalAlert show={show} handleClose={handleClose} />
+    </>
     )
 }

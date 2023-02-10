@@ -13,7 +13,16 @@
     border-radius: .5rem;
 }
 
+a.footer_link {
+    padding: .18rem 0;
+}
+
 .footer_link:hover {
     color: gray;
     text-decoration: none;
+}
+
+.footer-btn{
+    border-radius: .5rem;
+    background-color: white;
 }

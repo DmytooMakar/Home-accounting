@@ -16,7 +16,7 @@ export default function Blog(){
     console.log(blog.data?.title)
     return (<main className="main-blog-container">
         <h1>{blog.data?.title}</h1>
-        <p>{blog.data?.description}</p>
+        <p className="blogs-description">{blog.data?.description}</p>
     </main>
     )
 }

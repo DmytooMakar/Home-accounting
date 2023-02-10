@@ -1,0 +1,11 @@
+.section-container {
+    width: 20%;
+}
+
+.date {
+    margin: 0;
+    color: #c6c6c6;
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid #c6c6c6;
+}

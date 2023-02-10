@@ -13,7 +13,6 @@ export default function Blogs(){
         .then(res => setBlogs(res.data))
     }, [])
 
-
     return (
     <main className="blogs-container">
         {blogs.map(blog => <LinkBlog key={blog.id} blog={blog} />)}

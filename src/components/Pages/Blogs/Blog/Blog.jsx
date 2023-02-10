@@ -13,7 +13,6 @@ export default function Blog(){
         .then(res => setBlog(res))
     },[blogId]);
 
-    console.log(blog.data?.title)
     return (<main className="main-blog-container">
         <h1>{blog.data?.title}</h1>
         <p className="blogs-description">{blog.data?.description}</p>

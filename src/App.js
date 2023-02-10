@@ -1,5 +1,4 @@
-import { useState } from "react"
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   BrowserRouter as Router,
   Switch,
@@ -25,33 +24,33 @@ function App() {
 
   return (<>
     <Router>
-      <Header />
       <Switch>
         <Route path="/blogs/:blogId">
+          <Header />
           <div className='wrapper' >
             <Blog />
             <Footer />
           </div>
         </Route>
         <Route path="/blogs">
+          <Header />
           <div className='wrapper'>
             <Blogs />
             <Footer />
           </div>
         </Route>
         <Route path="/authorization">
+          <Header />
           <div className='wrapper'>
             <Authorization setUser={setUser} user={user} />
             <Footer />
           </div>
         </Route>
         <Route path="/accounting">
-          <div className='wrapper'>
-            <Accounting />
-            <Footer />
-          </div>
+          <Accounting />
         </Route>
         <Route path="/">
+          <Header />
           <div className='wrapper'>
             <Home />
             <Footer />
